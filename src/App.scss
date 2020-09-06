@@ -1,0 +1,183 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  // background-color: #282c34;
+}
+
+html{
+  font-size: 62.5%;
+  color:white;
+}
+
+:root {
+  --day-rain-bg: #07396a;
+  // --day-snow-bg: #7f8e9d;
+  --day-snow-bg: white;
+  --day-thunder-bg: #001525;
+  --day-clear-bg: #fe9928;
+  --day-cloud-bg: #5389ac;
+  --day-drizzle-bg:#2f5882;
+  --day-haze-bg:#5389ac;
+  --day-mist-bg:#3CD3AD;
+  // --day-sun-bg: #f7f2be;
+
+  --night-rain-bg: #001525;
+  --night-snow-bg: #001525;
+  --night-clear-bg: #001525;
+  --night-cloud-bg: #001525;
+
+  --rain-drop: #07396a;
+  --snow-flake: white;
+  
+  // background: #5d2f60; 
+  background: #003b73;
+
+  --cloud-bg1: #126ad2;
+  --cloud-bg2: #0643a5;
+  --cloud-bg3: #00308f;
+  --cloud-bg4: #2f5882;
+  --cloud-bg5: #5389ac;
+  --main-bg:var(--day-clear-bg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.Clouds{
+  --main-bg:var(--day-cloud-bg);
+  color:white;
+}
+.Rain{
+  --main-bg:var(--day-rain-bg);
+  color:white;
+}
+.Clear{
+  --main-bg:var(--day-clear-bg);
+  color:white;
+}
+.Snow{
+  --main-bg:var(--day-snow-bg);
+  color:black;
+}
+
+
+.Thunderstorm {
+  --main-bg:var(--day-thunder-bg);
+  color:white;
+}
+
+
+.Drizzle{
+  --main-bg:var(--day-drizzle-bg);
+  color:black;
+}
+.Haze {
+  --main-bg:var(--day-haze-bg);
+  color:black;
+
+}
+.Mist {
+  --main-bg:var(--day-mist-bg);
+ color:black;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.app {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+ 
+  background: var(--main-bg);
+  background-position: bottom;
+  background-size: cover;
+  transition: 0.4s;
+  min-height: 100vh;
+}
+
+.main{
+  position: relative;
+  height: 90vh;
+  background: var(--main-bg);
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  width: 80%;
+ 
+}
+
+.searchContainer {
+  appearance: none;
+  background: none;
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.searchBar {
+  
+  display: block;
+  width: 80%;
+  text-align: center;
+  color: #313131;
+  font-size: 2rem;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius:0 0px 16px 16px;
+  transition: 0.9s;
+}
+.searchBar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 0px 0px 0px 0px;
+  
+}
+
+.locationContainer{
+  position:absolute;
+  bottom:2rem;
+  left:1rem;
+  font-size:2rem;
+}
+
+.temp{
+  text-align: center;
+  font-size: 1.8rem;
+
+}
+
+.secondary{
+  display:flex;
+  // margin:10rem;
+  // flex-direction:column;
+  justify-content: space-between;
+  text-align: left;
+  // border:1px solid black;
+}
+
