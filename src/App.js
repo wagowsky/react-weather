@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
 
   let searchTerm;
-  let night;
+
 
   const searchTermer = (e) => {
     e.preventDefault();
