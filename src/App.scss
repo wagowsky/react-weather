@@ -163,12 +163,12 @@ html{
   position:absolute;
   bottom:2rem;
   left:1rem;
-  font-size:2rem;
+  font-size:4rem;
 }
 
 .temp{
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 6rem;
 
 }
 
@@ -181,3 +181,11 @@ html{
   // border:1px solid black;
 }
 
+.primary{
+  display:flex;
+  justify-content: center;
+  
+  
+  flex-direction:column;
+  height:40vh;
+}
