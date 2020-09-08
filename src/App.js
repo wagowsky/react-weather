@@ -26,21 +26,21 @@ function App() {
   //   // dispatch(searchFetchAction(searchTerm));
   // };
 
-  const getCoordinates =  () => {
-    console.log(`getCoordinates runs on load`);
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setLon(position.coords.longitude);
-        setLat(position.coords.latitude);
+  // const getCoordinates =  () => {
+  //   console.log(`getCoordinates runs on load`);
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(function (position) {
+  //       setLon(position.coords.longitude);
+  //       setLat(position.coords.latitude);
 
-        if (lon && lat) {
-          dispatch(autoFetchAction(lon, lat));
-        }
-      });
-    } else {
-      alert('Please search for a city!');
-    }
-  };
+  //       if (lon && lat) {
+  //         dispatch(autoFetchAction(lon, lat));
+  //       }
+  //     });
+  //   } else {
+  //     alert('Please search for a city!');
+  //   }
+  // };
 
   return (
     <div className={` app ${weather}`}>
@@ -95,7 +95,7 @@ function App() {
             </div> 
           </>
         ) : (
-          getCoordinates()
+          <div>Looks Like this is not your day</div>
         )}
       </main>
     </div>

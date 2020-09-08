@@ -23,6 +23,7 @@ console.log(searchTerm)
     );
 };
 
+
 export const autoFetchAction = (lon, lat) => (dispatch) => {
   console.log(lon);
   console.log(lat);
