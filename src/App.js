@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { searchFetchAction } from './actions';
 import './App.scss';
 import Drawing from './Drawing';
+import search from "./search.svg"
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
   const weather = useSelector((state) => state.fetch_reducer.weather);
 
   let [searchTerm, setSearchTerm] = useState('');
- 
+  let [open, setOpen] = useState(false);
 
 
   const dispatch = useDispatch();
@@ -20,10 +21,55 @@ function App() {
   return (
     <div className={` app ${weather}`}>
       <div className={` main`}>
-        <div className="drawingWrapper"><Drawing /></div>
+      <div className="drawingWrapper"><Drawing /></div>
         <div className="contentWrapper">
+          <div className='locationContainer'>
+          <form
+            className='searchContainer'
+            onSubmit={(e) => {
+              e.preventDefault();
+              dispatch(searchFetchAction(searchTerm));
+            }}
+            >
+              <img src={search} alt="search" className="magnifier" onClick={() => setOpen(!open) }/>
+              <input
+              className={open? "open searchBar":"searchBar"}
+              onChange={(e) => {
+                e.preventDefault();
+                setSearchTerm(e.target.value);
+              }}
+            />
+            </form>
+            
+        <div className='location'>
+                <h1>{searchResult.name}</h1>
+       </div>
+             
+              </div>
       
-        <header className='App-header'>
+      
+
+        {searchResult ? (
+          <div className="data">
+            
+           
+           
+           
+              <div className='primary'>
+              <div className='description'>
+              
+                {` ${searchResult.weather[0].main} `}
+             
+                </div>
+                <div className='temp'>
+                {Math.round(searchResult.main.temp)} C&deg;
+              </div>
+            </div>
+
+           
+          </div>
+        ) : (
+          <aside className='aside'>
           <form
             className='searchContainer'
             onSubmit={(e) => {
@@ -39,44 +85,7 @@ function App() {
               }}
             />
           </form>
-        </header>
-
-        {searchResult ? (
-          <div className="data">
-            
-            
-           
-            <div className='secondary'>
-              <div className='feels_like'>
-                {Math.round(searchResult.main.feels_like)} feel
-              </div>
-              <div className='humidity'>{searchResult.main.humidity} humid</div>
-              
-              <div className='temp_max'>
-                {`${Math.round(searchResult.main.temp_max)} max`}{' '}
-              </div>
-              <div className='temp_max'>{`${Math.round(
-                searchResult.main.temp_min
-              )} min`}</div>
-            </div> 
-            <div className='primary'>
-              <div className='temp'>
-                {Math.round(searchResult.main.temp)}C&deg;
-              </div>
-              <div className='locationContainer'>
-              <div className='location'>
-                <h1>{searchResult.name}</h1>
-              </div>
-              <div className='description'>
-                {searchResult.weather[0].description}
-              </div>
-            </div>
-            </div>
-
-           
-          </div>
-        ) : (
-          <div>Looks Like this is not your day</div>
+        </aside>
             )}
           </div>
       </div>

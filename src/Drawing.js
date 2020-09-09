@@ -36,7 +36,7 @@ function Drawing() {
   
       <div className="drawings" >
          
-<img src={cloud} className="drawing" />
+<img src={drawing} className="drawing" />
       </div>
       
       

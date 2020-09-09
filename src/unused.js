@@ -16,3 +16,16 @@
 
 //    <div className='wind'>{state.wind.speed}</div>
 //   <div className='wind'>{state.wind.deg}</div>
+{/* <div className='secondary'>
+<div className='feels_like'>
+  {Math.round(searchResult.main.feels_like)} feel
+</div>
+<div className='humidity'>{searchResult.main.humidity} humid</div>
+
+<div className='temp_max'>
+  {`${Math.round(searchResult.main.temp_max)} max`}
+</div>
+<div className='temp_max'>{`${Math.round(
+  searchResult.main.temp_min
+)} min`}</div>
+</div>  */}

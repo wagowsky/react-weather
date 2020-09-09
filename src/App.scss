@@ -7,11 +7,11 @@
 
 html {
   font-size: 62.5%;
-  color: white;
+  color: black;
 }
 
 :root {
-  --day-rain-bg: #07396a;
+  --day-rain-bg: #5389ac;
   // --day-snow-bg: #7f8e9d;
   --day-snow-bg: white;
   --day-thunder-bg: #001525;
@@ -43,11 +43,11 @@ html {
 
 .Clouds {
   --main-bg: var(--day-cloud-bg);
-  color: white;
+  color: black;
 }
 .Rain {
   --main-bg: var(--day-rain-bg);
-  color: white;
+  color: black;
 }
 .Clear {
   --main-bg: var(--day-clear-bg);
@@ -60,7 +60,7 @@ html {
 
 .Thunderstorm {
   --main-bg: var(--day-thunder-bg);
-  color: white;
+  color: black;
 }
 
 .Drizzle {
@@ -80,7 +80,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-
+font-family:Roboto;
   background: var(--main-bg);
   background-position: bottom;
   background-size: cover;
@@ -90,87 +90,113 @@ html {
 
 .main {
   display:flex;
- justify-content: space-between;
-  min-height: 80vh;
+ flex-direction: column;
+  min-height: 100vh;
   background: var(--main-bg);
   box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
- 
-}
-
-.searchContainer {
-  appearance: none;
-  background: none;
-  width: 100%;
-  // margin-bottom: 30px;
-  display: flex;
-  justify-content: flex-end;
-  // border:1px solid white;
-}
-
-.searchBar {
-  display: block;
-  width: 80%;
-  text-align: center;
-  color: #313131;
-  font-size: 2rem;
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: 0.9s;
-  margin:5rem;
-}
-.searchBar:focus {
-  background-color: rgba(255, 255, 255, 0.75);
- 
+ width:100%;
 }
 
 .locationContainer {
-  
-//margin:45vh 3vw;
+  display:flex;
+  justify-content: flex-end;
+  padding:5rem 2rem;
   font-size: 2rem;
-}
 
-.temp {
-  text-align: center;
-  font-size: 6rem;
+
+  
+  .magnifier{
+      margin-right:1rem;
+  width:2rem;  
+    
+  }
+
+
+  .searchContainer {
+    appearance: none;
+    background: none;
+    width: 100%;
+   
+    display: flex;
+    // justify-content: flex-end;
+  
+   
+    .magnifier:hover{
+      cursor: pointer;
+    }
+  
+  
+  
+    .searchBar {
+      display: block;
+      margin-right:1rem;
+      width: 0;
+      text-align: center;
+      color: #313131;
+      font-size: 2rem;
+      appearance: none;
+      border: none;
+      outline: none;
+      background: none;
+      background-color: rgba(255, 255, 255, 0.5);
+      transition: 0.9s;
+      
+    }
+
+    .open {
+      background-color: rgba(255, 255, 255, 0.75);
+      width:90%;
+    }
+  
+  }
   
 }
 
-.secondary {
-  display: flex;
-  margin:10rem;
-  flex-direction:column;
-  justify-content: space-between;
-  text-align: left;
-  border:1px solid black;
-  font-size: large;
-}
+
+
+
+
+
+
+
+
+
 
 .primary {
+  padding-top:5rem;
+
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  
+  justify-content: space-around;
+  align-items: center;
+
+
+  .description{
+    font-size:4rem;
+  }
+  .temp {
+    text-align: center;
+    font-size: 2rem;
+    
+  }
 
 }
 
 .contentWrapper{
-  width:50%;
+  // width:50%;
   // border:1px solid red;
 }
 
 .drawingWrapper{
-  display:flex;
-  width:50%; 
-  align-items: center;
-  justify-content: center; 
+  margin-top:5rem;
+  // display:flex;
+  // width:50%; 
+  // align-items: center;
+  // justify-content: center; 
   // border:1px solid red;
 }
 .drawings{
   
-//  border:1px solid white;
+//  border:1px solid black;
 padding:0 2rem;
  width:100%;
 
@@ -181,10 +207,43 @@ padding:0 2rem;
 @media all and (min-width: 600px) {
   .main {
     height: 100vh;
-
     box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
     width: 90%;
+flex-direction: row;
+
+
   }
+  
+  .drawingWrapper{
+    margin-top:5rem;
+    display:flex;
+    width:50%; 
+    align-items: center;
+    justify-content: center; 
+    // border:1px solid red;
+  }
+
+
+  .contentWrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    // padding:5rem 2rem;
+    font-size: 2rem;
+    // border:1px solid red;
+    width:50%;
+  }
+  .locationContainer {
+      flex-direction: column;
+    font-size: 2rem;
+  }
+
+.primary{
+
+  flex-direction: column;
+}
+
 }
 @media only screen and (min-width: 900px) {
   .main {
