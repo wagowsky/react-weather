@@ -51,7 +51,7 @@ html {
 }
 .Clear {
   --main-bg: var(--day-clear-bg);
-  color: white;
+  color: black;
 }
 .Snow {
   --main-bg: var(--day-snow-bg);
@@ -89,20 +89,22 @@ html {
 }
 
 .main {
-  position: relative;
-  height: 100vh;
+  display:flex;
+ justify-content: space-between;
+  min-height: 80vh;
   background: var(--main-bg);
   box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
-  width: 100%;
+ 
 }
 
 .searchContainer {
   appearance: none;
   background: none;
   width: 100%;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  // border:1px solid white;
 }
 
 .searchBar {
@@ -116,27 +118,24 @@ html {
   outline: none;
   background: none;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 16px 0px 16px 0px;
   transition: 0.9s;
-  margin-top:5rem;
+  margin:5rem;
 }
 .searchBar:focus {
   background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 0px 16px 0px 16px;
  
 }
 
 .locationContainer {
-  position: absolute;
-  bottom: 4rem;
-  left: 5rem;
+  
+//margin:45vh 3vw;
   font-size: 2rem;
 }
 
 .temp {
   text-align: center;
   font-size: 6rem;
-  border:1px white solid;
+  
 }
 
 .secondary {
@@ -154,8 +153,30 @@ html {
   justify-content: center;
   flex-direction: column;
   
-  border:1px white solid;
+
 }
+
+.contentWrapper{
+  width:50%;
+  // border:1px solid red;
+}
+
+.drawingWrapper{
+  display:flex;
+  width:50%; 
+  align-items: center;
+  justify-content: center; 
+  // border:1px solid red;
+}
+.drawings{
+  
+//  border:1px solid white;
+padding:0 2rem;
+ width:100%;
+
+}
+
+
 
 @media all and (min-width: 600px) {
   .main {
@@ -170,6 +191,8 @@ html {
     height: 80vh;
     background: var(--main-bg);
 
-    width: 40%;
+    width: 60%;
   }
 }
+
+

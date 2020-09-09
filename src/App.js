@@ -1,50 +1,28 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { searchFetchAction, autoFetchAction } from './actions';
+import { searchFetchAction } from './actions';
 import './App.scss';
+import Drawing from './Drawing';
+
 
 function App() {
   const searchResult = useSelector((state) => state.fetch_reducer.searchResult);
   const weather = useSelector((state) => state.fetch_reducer.weather);
 
   let [searchTerm, setSearchTerm] = useState('');
-  let [lon, setLon] = useState('');
-  let [lat, setLat] = useState('');
-  console.log(searchTerm);
-  console.log(weather);
+ 
+
 
   const dispatch = useDispatch();
 
-  // const searchTermer = (e) => {
-  //   e.preventDefault();
-  //   searchTerm = e.target.value;
-  // };
 
-  // const fetchAPI = (e,searchTerm) => {
-  //   e.preventDefault();
-  //   console.log(searchTerm)
-  //   // dispatch(searchFetchAction(searchTerm));
-  // };
-
-  // const getCoordinates =  () => {
-  //   console.log(`getCoordinates runs on load`);
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(function (position) {
-  //       setLon(position.coords.longitude);
-  //       setLat(position.coords.latitude);
-
-  //       if (lon && lat) {
-  //         dispatch(autoFetchAction(lon, lat));
-  //       }
-  //     });
-  //   } else {
-  //     alert('Please search for a city!');
-  //   }
-  // };
 
   return (
     <div className={` app ${weather}`}>
-      <main className={` main ${weather}`}>
+      <div className={` main`}>
+        <div className="drawingWrapper"><Drawing /></div>
+        <div className="contentWrapper">
+      
         <header className='App-header'>
           <form
             className='searchContainer'
@@ -64,22 +42,10 @@ function App() {
         </header>
 
         {searchResult ? (
-          <>
-            <div className='primary'>
-              <div className='temp'>
-                {Math.round(searchResult.main.temp)}C&deg;
-              </div>
-            </div>
-
-            <div className='locationContainer'>
-              <div className='location'>
-                <h1>{searchResult.name}</h1>
-              </div>
-              <div className='description'>
-                {searchResult.weather[0].description}
-              </div>
-            </div>
-
+          <div className="data">
+            
+            
+           
             <div className='secondary'>
               <div className='feels_like'>
                 {Math.round(searchResult.main.feels_like)} feel
@@ -93,11 +59,27 @@ function App() {
                 searchResult.main.temp_min
               )} min`}</div>
             </div> 
-          </>
+            <div className='primary'>
+              <div className='temp'>
+                {Math.round(searchResult.main.temp)}C&deg;
+              </div>
+              <div className='locationContainer'>
+              <div className='location'>
+                <h1>{searchResult.name}</h1>
+              </div>
+              <div className='description'>
+                {searchResult.weather[0].description}
+              </div>
+            </div>
+            </div>
+
+           
+          </div>
         ) : (
           <div>Looks Like this is not your day</div>
-        )}
-      </main>
+            )}
+          </div>
+      </div>
     </div>
   );
 }

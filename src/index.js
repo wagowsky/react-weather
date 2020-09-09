@@ -19,7 +19,7 @@ import { autoFetchAction } from "./actions"
     
   };
 
-// store.dispatch(autoFetchAction)
+
 
 ReactDOM.render(
   <Provider store={store}>
