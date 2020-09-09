@@ -202,8 +202,6 @@ padding:0 2rem;
 
 }
 
-
-
 @media all and (min-width: 600px) {
   .main {
     height: 100vh;
@@ -252,6 +250,48 @@ flex-direction: row;
 
     width: 60%;
   }
+
+  .locationContainer {
+    //margin:45vh 3vw;
+    font-size: 2rem;
+  }
+
+  .temp {
+    text-align: center;
+    font-size: 6rem;
+  }
+
+  .secondary {
+    display: flex;
+    margin: 10rem;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    border: 1px solid black;
+    font-size: large;
+  }
+
+  .primary {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .contentWrapper {
+    width: 50%;
+    // border:1px solid red;
+  }
+
+  .drawingWrapper {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    // border:1px solid red;
+  }
+  .drawings {
+    //  border:1px solid white;
+    padding: 0 2rem;
+    width: 100%;
+  }
 }
-
-
