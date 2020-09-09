@@ -90,8 +90,8 @@ html {
 
 .main {
   display:flex;
- justify-content: space-between;
-  min-height: 80vh;
+flex-direction: column;
+  min-height: 100vh;
   background: var(--main-bg);
   box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
  
@@ -127,8 +127,7 @@ html {
 }
 
 .locationContainer {
-  
-//margin:45vh 3vw;
+
   font-size: 2rem;
 }
 
@@ -146,6 +145,7 @@ html {
   text-align: left;
   border:1px solid black;
   font-size: large;
+  display:none;
 }
 
 .primary {
@@ -157,15 +157,17 @@ html {
 }
 
 .contentWrapper{
-  width:50%;
+  // width:50%;
   // border:1px solid red;
 }
 
 .drawingWrapper{
-  display:flex;
-  width:50%; 
-  align-items: center;
-  justify-content: center; 
+  // position:absolute;
+ 
+  // display:flex;
+  // width:50%; 
+  // align-items: center;
+  // justify-content: center; 
   // border:1px solid red;
 }
 .drawings{
@@ -193,6 +195,57 @@ padding:0 2rem;
 
     width: 60%;
   }
+
+
+  .locationContainer {
+  
+    //margin:45vh 3vw;
+      font-size: 2rem;
+    }
+    
+    .temp {
+      text-align: center;
+      font-size: 6rem;
+      
+    }
+    
+    .secondary {
+      display: flex;
+      margin:10rem;
+      flex-direction:column;
+      justify-content: space-between;
+      text-align: left;
+      border:1px solid black;
+      font-size: large;
+    }
+    
+    .primary {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      
+    
+    }
+    
+    .contentWrapper{
+      width:50%;
+      // border:1px solid red;
+    }
+    
+    .drawingWrapper{
+      display:flex;
+      width:50%; 
+      align-items: center;
+      justify-content: center; 
+      // border:1px solid red;
+    }
+    .drawings{
+      
+    //  border:1px solid white;
+    padding:0 2rem;
+     width:100%;
+    
+    }
 }
 
 
