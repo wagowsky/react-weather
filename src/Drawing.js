@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector} from 'react-redux';
 
 import rain from './rain.svg'
 import snow from './snow.svg'
@@ -8,10 +8,14 @@ import cloud from './cloud.svg'
 
 function Drawing() {
  
-    const searchResult = useSelector((state) => state.fetch_reducer.searchResult);
+    // const searchResult = useSelector((state) => state.fetch_reducer.searchResult);
     const weather = useSelector((state) => state.fetch_reducer.weather);
 
-    const drawings = [rain, snow, sun, cloud]
+
+
+
+
+    // const drawings = [rain, snow, sun, cloud]
     let drawing
   
     switch (weather) {
@@ -19,14 +23,13 @@ function Drawing() {
             drawing = cloud;
             break;
         case "Rain":
-            break;
-            drawing = rain;
+         drawing = rain;
             break;
         case "Clear":
-            drawing = sun;
+          drawing = sun;
             break;
         case "Snow":
-            drawing = snow;
+          drawing = snow;
             break;
             default: drawing=null
 }
@@ -36,7 +39,7 @@ function Drawing() {
   
       <div className="drawings" >
          
-<img src={cloud} className="drawing" />
+<img src={drawing} className="drawing"  alt="drawing"/>
       </div>
       
       
