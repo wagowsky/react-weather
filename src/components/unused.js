@@ -29,3 +29,8 @@
   searchResult.main.temp_min
 )} min`}</div>
 </div>  */}
+
+
+{/* <div className='description'>
+                  {` ${searchResult.weather[0].main} `}
+                </div> */}

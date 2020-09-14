@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector} from 'react-redux';
 
-import rain from './rain.svg'
-import snow from './snow.svg'
-import sun from './sun.svg'
-import cloud from './cloud.svg'
+import rain from '../assets/rain.png'
+import snow from '../assets/snow.png'
+import sun from '../assets/sun.png'
+import cloud from '../assets/cloud.png'
 
 function Drawing() {
  
@@ -15,7 +15,7 @@ function Drawing() {
 
 
 
-    // const drawings = [rain, snow, sun, cloud]
+  
     let drawing
   
     switch (weather) {
@@ -31,6 +31,9 @@ function Drawing() {
         case "Snow":
           drawing = snow;
             break;
+            case "Fog":
+              drawing = cloud;
+                break;
             default: drawing=null
 }
 

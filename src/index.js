@@ -17,7 +17,8 @@ import { autoFetchAction } from "./actions"
         }
       });
     
-  };
+  }
+ 
 
 
 

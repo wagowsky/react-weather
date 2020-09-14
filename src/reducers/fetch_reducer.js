@@ -1,7 +1,7 @@
 
 
 
-const fetch_reducer=(state={searchResult:"",weather:"",night:false,cold:false,searchTerm:"",open:false},action)=>{
+const fetch_reducer=(state={searchResult:"",weather:""},action)=>{
 
 
 switch(action.type){
