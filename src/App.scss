@@ -72,6 +72,7 @@ html {
   background: var(--main-bg);
   min-height: 100vh;
   display: flex;
+  color:var(--color);
 }
 
 .main {
@@ -120,11 +121,11 @@ html {
 
   .searchBar {
     background: var(--main-bg);
-    opacity: 0.5;
     outline: none;
     line-height: 5vw;
     font-size: 5vw;
     width: 60%;
+    color:var(--color);
   }
 }
 
@@ -173,7 +174,7 @@ html {
     .searchBar {
       font-size: 4vw;
       background: var(--main-bg);
-      opacity: 0.5;
+     
       outline: none;
       line-height: 4vw;
       width: 100%;
@@ -198,6 +199,7 @@ html {
   .searchBar {
     line-height: 4vw;
     width: 100%;
+    padding:5px;
   }
   .searchContainer {
   }
