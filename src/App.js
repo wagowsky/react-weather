@@ -33,8 +33,9 @@ function App() {
           ) : (
             <Search />
           )}
+           {searchResult ? (<Search  />):null} 
         </div>
-        {searchResult ? (<Search  />):null} 
+       
       </div>
     </div>
   );
