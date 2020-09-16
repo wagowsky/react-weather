@@ -96,7 +96,7 @@ html {
     flex-direction: column;
     width: 50%;
     padding-top: 40%;
-   
+
     font-size: 10vw;
   }
 
@@ -117,17 +117,14 @@ html {
   display: flex;
   padding: 5% 0;
   justify-content: flex-end;
- 
-  
-
 
   .searchBar {
     background: var(--main-bg);
     opacity: 0.5;
     outline: none;
-    line-height:5vw;
-    font-size:5vw;
-    width:60%;
+    line-height: 5vw;
+    font-size: 5vw;
+    width: 60%;
   }
 }
 
@@ -135,18 +132,16 @@ html {
   .app {
     justify-content: center;
     min-height: 100vh;
-   
   }
 
   .main {
     flex-direction: row;
-    }
+  }
 
   .drawingWrapper {
     display: flex;
     width: 50%;
-    }
- 
+  }
 
   .contentWrapper {
     display: flex;
@@ -154,17 +149,16 @@ html {
     justify-content: space-around;
     align-items: center;
     width: 50%;
-  
   }
 
-  .data { 
-    height:60vh;
+  .data {
+    height: 60vh;
     .right {
       width: 100%;
-       align-items: center;
-      flex-direction:column;
-      justify-content:center;
-      height:100%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
     }
     .left {
       display: none;
@@ -174,47 +168,37 @@ html {
     display: flex;
     // padding: 5% 0;
     justify-content: flex-end;
-    width:100%;
-  
-  
+    width: 100%;
+
     .searchBar {
-      font-size:4vw;
+      font-size: 4vw;
       background: var(--main-bg);
       opacity: 0.5;
       outline: none;
-      line-height:4vw;
-      width:100%;
+      line-height: 4vw;
+      width: 100%;
     }
   }
-
-
 }
 
 @media only screen and (min-width: 900px) {
+  .main {
+    width: 80%;
+    box-shadow: 0px 13px 40px -13px rgba(0, 0, 0, 0.75);
+  }
 
-
- .main{
- 
-   width:80%;
-   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
- }
-
- 
   .contentWrapper {
     width: 50%;
     height: 80%;
   }
-  .drawingWrapper{
-    height:50%;
+  .drawingWrapper {
+    height: 50%;
   }
 
-.searchBar{
-  line-height:4vw;
-  width:100%;
-}
-  .searchContainer{
-  
-    border:1px solid red;
+  .searchBar {
+    line-height: 4vw;
+    width: 100%;
   }
-  
+  .searchContainer {
+  }
 }
