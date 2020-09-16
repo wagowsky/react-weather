@@ -8,11 +8,11 @@ switch(action.type){
 
     case"SEARCH_FETCH":
 
-    console.log(action.payload)
+   
     return {...state,searchResult:action.payload.data ,weather:action.payload.data.weather[0].main};
     case"AUTO_FETCH":
 
-    console.log(action.payload)
+   
     return {...state,searchResult:action.payload.data ,weather:action.payload.data.weather[0].main};
 
 

@@ -16,8 +16,8 @@ function Search() {
   return (
  
     <form
-    // className={open ? 'open searchContainer' : 'searchContainer'}
-    className='open searchContainer'
+ 
+    className='searchContainer'
     onSubmit={(e) => {
       e.preventDefault();setSearchTerm("");
       dispatch(searchFetchAction(searchTerm));
