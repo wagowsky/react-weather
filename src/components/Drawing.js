@@ -36,10 +36,7 @@ function Drawing() {
     case 'Mist':
       drawing = cloud;
       break;
-    case 'Drizzle':
-      drawing = cloud;
-      break;
-    default:
+      default:
       drawing = null;
   }
 
